@@ -21,13 +21,7 @@ routes.post('/feedbacks', async (req, res) => {
 
     //comando para fazer um insert dentro do bd: prism.nomedoDb.create({}) dentro do create, existe 2 tipos de opção, data ou select.
     //data passa os dados que serão criados e o select retorna os dados que serão criados.
-        const feedback = await prisma.feedBack.create({
-            data : {
-                type,
-                comment,
-                screenshot,
-            }     
-        })
+        const feedback = 
 
        await transport.sendMail({
             from: "Equipe Feedget <oi@feedget.com>",
