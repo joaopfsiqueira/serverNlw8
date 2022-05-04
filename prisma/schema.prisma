@@ -9,3 +9,16 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+
+//criando colunas dentro da tabela @@map
+//@id é informando que o id vai ser a primary key e o @default(uuid()) é para gerar um id automatico
+model FeedBack {
+  id String @id @default(uuid())
+
+  type String
+  comment String
+  screenshot String?
+
+  @@map("feedbacks")
+}
