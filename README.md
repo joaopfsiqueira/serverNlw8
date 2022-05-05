@@ -26,3 +26,5 @@
 Por ser TS, é necessário instalar outras coisas para poder fazer o jest interpretar o TS.
 4 - https://swc.rs/docs/usage/jest
 5 - Por fim, só rodar a typagem do jest. *npm i @types/jest -D*
+
+Um segredo é a pasta "coverage" gerada pelo *npm run test*, ao abrir o HTMl ele é capaz de mostrar os erros que os testes não estão cobrindo.
