@@ -42,7 +42,21 @@ describe('SubmitFeedback', () => {
             comment: '',
             screenshot: 'data:image/png;base64, 323276832gdsf67sd78fds687f67s8d',
         })).rejects.toThrow();
-    })
+    });
+
+
+    it('Shoud not be able to submit a feedback with an invalid screenshot', async () => {
+        const submitFeedback = new SubmitFeedbackUseCase(
+            { create: async() => {}},
+            { sendMail: async () => {}}
+        )
+    
+        await expect(submitFeedback.execute({
+            type: 'BUG',
+            comment: 'Ta tudo bugado',
+            screenshot: 'teste.jpg',
+        })).rejects.toThrow();
+    });
 
 });
 

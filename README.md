@@ -28,3 +28,4 @@ Por ser TS, é necessário instalar outras coisas para poder fazer o jest interp
 5 - Por fim, só rodar a typagem do jest. *npm i @types/jest -D*
 
 Um segredo é a pasta "coverage" gerada pelo *npm run test*, ao abrir o HTMl ele é capaz de mostrar os erros que os testes não estão cobrindo.
+Isso também é mostrado no próprio terminal ao executar o jest.
